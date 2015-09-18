@@ -1,0 +1,95 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Users\Rene\Enseignement\rb-laboratories\trunk\QuartusOwnLib\Avalon_i2c\Tst_i2c\simulation\modelsim
+Ei2c_clkgen
+Z1 w1147161258
+Z2 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z5 dE:\Users\Rene\Enseignement\rb-laboratories\trunk\QuartusOwnLib\Avalon_i2c\Tst_i2c\simulation\modelsim
+Z6 8E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd
+Z7 FE:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd
+l0
+L18
+Vgg3c[?7H;iEcc4galR@?O2
+!s100 fKZ94bVH:aaF>_6`0nWJ51
+Z8 OV;C;6.6d;45
+31
+Z9 o-93 -work work -O0
+Z10 tExplicit 1
+Abehavioral
+R2
+R3
+R4
+DEx4 work 10 i2c_clkgen 0 22 gg3c[?7H;iEcc4galR@?O2
+l42
+L36
+V@7[mcVa86gljIQH=5hXP23
+!s100 o9_P6>H]BKeY;go>5F8YP1
+R8
+31
+Mx3 4 ieee 18 std_logic_unsigned
+Z11 Mx2 4 ieee 14 std_logic_1164
+Z12 Mx1 4 ieee 15 std_logic_arith
+R9
+R10
+Ei2c_core
+Z13 w1326059108
+R2
+R3
+R5
+Z14 8E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd
+Z15 FE:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd
+l0
+L18
+VPLa<aSK_2PTFW:o_8W7^J3
+R8
+31
+R9
+R10
+!s100 [Q6z[C9o1Bm`GaF1]z@Ad2
+Abehavorial
+R2
+R3
+DEx4 work 8 i2c_core 0 22 PLa<aSK_2PTFW:o_8W7^J3
+l89
+L48
+V[HkFOXef9`V6Z;W>ib4^h0
+R8
+31
+R11
+R12
+R9
+R10
+!s100 ;GkOT8U38?Z=bo=fJIXM<1
+Ei2c_interface
+Z16 w1326059517
+R2
+R3
+R5
+Z17 8E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd
+Z18 FE:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd
+l0
+L61
+V;faEe2GgR<ijl?T^16TQb0
+R8
+31
+R9
+R10
+!s100 YZg]^jCWJBjLCi0SjIMdZ0
+Astructural
+R2
+R3
+DEx4 work 13 i2c_interface 0 22 ;faEe2GgR<ijl?T^16TQb0
+l183
+L83
+V=_@AHLBf8Di_75EOzLdGl2
+R8
+31
+R11
+R12
+R9
+R10
+!s100 [45][nH0O8e7W=e5[66zL2

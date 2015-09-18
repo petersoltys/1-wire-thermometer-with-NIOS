@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {Tst_i2c_Avalon.vho Tst_i2c_Avalon_vhd.sdo}}
+	{{"Fast Model"} {Tst_i2c_Avalon_fast.vho Tst_i2c_Avalon_vhd_fast.sdo}}
+}

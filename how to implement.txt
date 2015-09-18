@@ -1,0 +1,44 @@
+
+Autor    : Peter Soltys
+Projekt  : Bakalarska praca "Procesor NIOS vo vlozenych aplikaciach"
+Veduci   : doc. Ing. Milos Drutarovsky, PhD
+   
+Datum    : 24.jun 2015
+Verzia   : 1.2
+
+
+Hardver   : vyvojova doska altera UP3-1C6
+
+
+Subory    : archiv -- zarchivovany projekt pre Quartus 9.1
+                     
+            softare -- zdrojove kody pre obsluzny softver
+
+--Cely priecinok i2cavalon aj 1-wire v tomto priecinku je potrebne skopirovat 
+  do <subor instalacie Quartus>/ip        priklad: C/Altera/91sp2/ip/
+  (navod na implementaciu jednotlivych komponentov je vo vnutri priecinku)
+--spustime quartus 9.1sp2(testovana verzia)
+--vyberieme project->restore project takto opetovne rozarchivujeme projekt
+--do priecinku kde je projekt rozbalenz je potrebne skopirovat priecinok sls_tristate_sram_16_bit_10_ns
+--otvorime SOPC Builder a stlacime generate a ulozit projekt 
+--je potrebne skompilovat projekt
+--nasledne nahrat program do FPGA obvodu
+--v projektovom adresari, kde je rozbaleny projekt vytvorime priecinok s nazvom software
+--spustime nios II software build, a nastavime pracovnz adresar na prave vztvoreny adresar software
+--spustime file->new->project from template vyberieme blank project a nastavime sopc info subor, 
+  ktory sa nachadza v priecinku kde je rozbalieny projekt
+--klikneme pravim tlacitkom na nazov_bsp->nios->generate BSP
+--nakopirujeme do <rozbaleny projekt>/software/<nazov projektu>/ subory main.c a priecinok periferie 
+  z priecinka software
+--stlacime project->build all
+--stlacime run->run configuration
+--nios II hardware configuration , nastavime project name
+--stlacime run (casto je rozdielne ocakavane ID procesora rozdielne od nahranej verzie, 
+  na ignorovanie tejto chyby je potrebne zaskrtnut v Target Connection -> 
+  ignore mismatched ID, a ignore mismatched system timestamp)
+
+
+
+
+
+

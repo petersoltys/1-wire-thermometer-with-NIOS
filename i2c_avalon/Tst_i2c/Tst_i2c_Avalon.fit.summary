@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Jan 08 22:52:52 2012
+Quartus II 64-Bit Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : Tst_i2c_Avalon
+Top-level Entity Name : i2c_interface
+Family : Cyclone II
+Device : EP2C20F484C6
+Timing Models : Final
+Total logic elements : 141 / 18,752 ( < 1 % )
+    Total combinational functions : 116 / 18,752 ( < 1 % )
+    Dedicated logic registers : 100 / 18,752 ( < 1 % )
+Total registers : 100
+Total pins : 26 / 315 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

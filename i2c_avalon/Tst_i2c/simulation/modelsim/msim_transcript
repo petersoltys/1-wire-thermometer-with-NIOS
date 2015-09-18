@@ -1,0 +1,518 @@
+# Reading C:/altera/11.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\11.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\11.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface
+# vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.i2c_interface(structural)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+force -freeze sim:/i2c_interface/clk 1 0, 0 {10000 ps} -r 20ns
+do sim.do
+# Loading work.i2c_interface(structural)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 60 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 100 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 140 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 140 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 140 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 140 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 180 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 180 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 180 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 180 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 200 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+force -freeze sim:/i2c_interface/reset 1 0
+force -freeze sim:/i2c_interface/reset 0 0
+do sim.do
+force -deposit sim:/i2c_interface/scl H 0
+force -deposit sim:/i2c_interface/sda H 0
+do sim.do
+run 1 ms
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+run 1 ms
+force -freeze sim:/i2c_interface/i_clkdiv_reg 00000110 0
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+run 1000ns
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+force -freeze sim:/i2c_interface/chipselect 0 0
+force -freeze sim:/i2c_interface/read 0 0
+force -freeze sim:/i2c_interface/write 0 0
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/simulation/modelsim/wave.do
+vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface
+# vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.i2c_interface(structural)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+run wave.do
+# Invalid time value: wave.do
+do E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/simulation/modelsim/wave.do
+run sim.do
+# Invalid time value: sim.do
+do sim.do
+# Loading work.i2c_interface(structural)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface
+# vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.i2c_interface(structural)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+do wave.do
+do sim.do
+# Loading work.i2c_interface(structural)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+force -freeze sim:/i2c_interface/address 00 0
+force -freeze sim:/i2c_interface/chipselect 1 0
+force -freeze sim:/i2c_interface/write 1 0
+force -freeze sim:/i2c_interface/writedata 1100001111 0
+# Value length (10) does not equal array index length (8).
+# 
+# ** Error: (vsim-4011) Invalid force value: 1100001111 0.
+# 
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+run 4800 ns
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+run 500 ns
+vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface
+# vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.i2c_interface(structural)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+do wave.do
+do sim.do
+# Loading work.i2c_interface(structural)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+run 300 ns
+vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface
+# vsim +altera -do Tst_i2c_Avalon_run_msim_rtl_vhdl.do -l msim_transcript -gui work.i2c_interface 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.i2c_interface(structural)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# do Tst_i2c_Avalon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_interface.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_interface
+# -- Compiling architecture structural of i2c_interface
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_core.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity i2c_core
+# -- Compiling architecture behavorial of i2c_core
+# vcom -93 -work work {E:/Users/Rene/Enseignement/rb-laboratories/trunk/QuartusOwnLib/Avalon_i2c/Tst_i2c/i2c_clkgen.vhd}
+# Model Technology ModelSim ALTERA vcom 6.6d Compiler 2010.11 Nov  2 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity i2c_clkgen
+# -- Compiling architecture behavioral of i2c_clkgen
+# 
+do wave.do
+do sim.do
+# Loading work.i2c_interface(structural)
+# Loading work.i2c_clkgen(behavioral)
+# Loading work.i2c_core(behavorial)
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+do sim.do
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 0  Instance: /i2c_interface/clkgen

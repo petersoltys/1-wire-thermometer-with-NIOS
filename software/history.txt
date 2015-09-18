@@ -1,0 +1,17 @@
+2.4.2015 - doplnenie one_wire.c o vyhladavanie ROM na zbernici pri pouziti                       
+           predpripravenych funkcii zo stranky :
+           http://www.maximintegrated.com/en/app-notes/index.mvp/id/187
+
+7.4.2015 - upravavsetkych zdrojovych kodov do sablony
+           pouzivanie medzier namisto tabulatorov, aby v kazdom editore vysledny 
+           kod vyzeral rovnako
+           maximalne 80 znakov v riadku
+           nazvy makier vekymi pismenami
+           premenovanie niektorych premennych
+           rozsierenie okomentovania zdrojovych kodov
+           pridanie cisila verzii
+           premenovanie nazvou funkcii na anglicke nazvy
+           uprava zdrojoveho kodu one_wire.c podla standardov doxygen
+           zmena niektorych lokalnych premennych na globalne
+           uprava hlavickovydh suborov do prelozitelnej podoby
+           vytvorenie read_me.txt a history.txt

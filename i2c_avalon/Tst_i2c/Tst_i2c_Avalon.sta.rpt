@@ -1,0 +1,1240 @@
+TimeQuest Timing Analyzer report for Tst_i2c_Avalon
+Sun Jan 08 22:53:14 2012
+Quartus II 64-Bit Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                     ;
++--------------------+------------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version ;
+; Revision Name      ; Tst_i2c_Avalon                                                   ;
+; Device Family      ; Cyclone II                                                       ;
+; Device Name        ; EP2C20F484C6                                                     ;
+; Timing Models      ; Final                                                            ;
+; Delay Model        ; Combined                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                      ;
++--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 239.87 MHz ; 239.87 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.169 ; -177.842      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -101.380              ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                         ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[0]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[7]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[6]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[5]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[4]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[3]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[2]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.169 ; i_write_reg                    ; i_clkdiv_reg[1]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.212      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[0]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[7]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[6]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[5]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[4]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[3]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[2]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -3.011 ; i_read_reg                     ; i_clkdiv_reg[1]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 4.054      ;
+; -2.930 ; i_write_reg                    ; i_ack_reg                       ; clk          ; clk         ; 1.000        ; 0.008      ; 3.974      ;
+; -2.930 ; i_write_reg                    ; i_int_en_reg                    ; clk          ; clk         ; 1.000        ; 0.008      ; 3.974      ;
+; -2.772 ; i_read_reg                     ; i_ack_reg                       ; clk          ; clk         ; 1.000        ; 0.008      ; 3.816      ;
+; -2.772 ; i_read_reg                     ; i_int_en_reg                    ; clk          ; clk         ; 1.000        ; 0.008      ; 3.816      ;
+; -2.603 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.638      ;
+; -2.603 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.638      ;
+; -2.603 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.638      ;
+; -2.603 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.638      ;
+; -2.603 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.638      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_E ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.530 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.575      ;
+; -2.522 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.557      ;
+; -2.522 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.557      ;
+; -2.522 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.557      ;
+; -2.522 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.557      ;
+; -2.522 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.557      ;
+; -2.502 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_B    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.538      ;
+; -2.498 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 1.000        ; 0.001      ; 3.535      ;
+; -2.493 ; i2c_core:core|p_state.s_Stop_B ; i2c_core:core|sda_out           ; clk          ; clk         ; 1.000        ; -0.001     ; 3.528      ;
+; -2.461 ; i2c_core:core|p_state.s_Stop_A ; i2c_core:core|sda_out           ; clk          ; clk         ; 1.000        ; -0.001     ; 3.496      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_E ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.449 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 1.000        ; 0.009      ; 3.494      ;
+; -2.421 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_B    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.457      ;
+; -2.417 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 1.000        ; 0.001      ; 3.454      ;
+; -2.359 ; i_write_reg                    ; i_data_in[2]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[0]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[4]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[5]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[1]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[3]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[6]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.359 ; i_write_reg                    ; i_data_in[7]                    ; clk          ; clk         ; 1.000        ; 0.015      ; 3.410      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[1]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.348 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[0]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.384      ;
+; -2.293 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.328      ;
+; -2.293 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 3.328      ;
+; -2.293 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.328      ;
+; -2.293 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.328      ;
+; -2.293 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 3.328      ;
+; -2.257 ; i_write_reg                    ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; 0.006      ; 3.299      ;
+; -2.257 ; i_write_reg                    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; 0.006      ; 3.299      ;
+; -2.257 ; i_write_reg                    ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; 0.006      ; 3.299      ;
+; -2.257 ; i_write_reg                    ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; 0.006      ; 3.299      ;
+; -2.257 ; i_write_reg                    ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; 0.006      ; 3.299      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[1]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.255 ; i2c_clkgen:clkgen|clk_ctr[1]   ; i2c_clkgen:clkgen|clk_ctr[0]    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.291      ;
+; -2.223 ; i2c_core:core|i_ctr[1]         ; i2c_core:core|i_dout[5]         ; clk          ; clk         ; 1.000        ; -0.012     ; 3.247      ;
+; -2.222 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_C    ; clk          ; clk         ; 1.000        ; 0.000      ; 3.258      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
+; -2.220 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.009      ; 3.265      ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                          ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; i2c_core:core|i_dout[0]         ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_ack_out         ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i_write_reg                     ; i_write_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i_read_reg                      ; i_read_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_ctr[0]          ; i2c_core:core|i_ctr[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_ctr[1]          ; i2c_core:core|i_ctr[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_ctr[2]          ; i2c_core:core|i_ctr[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|p_state.s_DoneAck ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|p_state.s_Start_D ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|p_state.s_Rd_D    ; i2c_core:core|p_state.s_Rd_D    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|p_state.s_RdAck_D ; i2c_core:core|p_state.s_RdAck_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[1]         ; i2c_core:core|i_dout[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i_int_pe_reg                    ; i_int_pe_reg                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[2]         ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[3]         ; i2c_core:core|i_dout[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[4]         ; i2c_core:core|i_dout[4]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[5]         ; i2c_core:core|i_dout[5]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[6]         ; i2c_core:core|i_dout[6]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_core:core|i_dout[7]         ; i2c_core:core|i_dout[7]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.513 ; i_int_en_reg                    ; irq~reg0                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.779      ;
+; 0.516 ; i2c_core:core|i_dout[5]         ; i2c_core:core|data_out[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.517 ; i2c_core:core|p_state.s_RdAck_B ; i2c_core:core|p_state.s_RdAck_C ; clk          ; clk         ; 0.000        ; 0.000      ; 0.783      ;
+; 0.519 ; i2c_core:core|data_out[7]       ; readdata[7]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.520 ; i2c_core:core|i_ack_out         ; i2c_core:core|ack_out           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.786      ;
+; 0.521 ; i2c_core:core|p_state.s_Rd_B    ; i2c_core:core|p_state.s_Rd_C    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521 ; i2c_core:core|i_dout[4]         ; i2c_core:core|data_out[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521 ; i2c_core:core|i_dout[6]         ; i2c_core:core|data_out[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.787      ;
+; 0.526 ; i2c_core:core|p_state.s_DoneAck ; i2c_core:core|cmd_done          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.792      ;
+; 0.527 ; i2c_core:core|p_state.s_Reset   ; i2c_core:core|p_state.s_Idle    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; i2c_clkgen:clkgen|clk_ctr[7]    ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.528 ; i2c_core:core|p_state.s_Reset   ; i2c_core:core|busy              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.528 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|p_state.s_Rd_D    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.530 ; i2c_core:core|p_state.s_Start_C ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.532 ; i2c_core:core|p_state.s_RdAck_C ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.532 ; i2c_core:core|p_state.s_RdAck_C ; i2c_core:core|p_state.s_RdAck_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.533 ; i2c_core:core|scl_out           ; scl_in                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.554 ; i2c_core:core|i_ctr[1]          ; i2c_core:core|i_ctr[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.820      ;
+; 0.558 ; sda_in                          ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.562 ; sda_in                          ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.626 ; i2c_core:core|p_state.s_Done    ; i2c_core:core|cmd_done          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.892      ;
+; 0.656 ; i2c_core:core|data_out[0]       ; readdata[0]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.656 ; i2c_core:core|i_dout[7]         ; i2c_core:core|data_out[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.661 ; i2c_core:core|data_out[2]       ; readdata[2]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.663 ; i2c_core:core|data_out[1]       ; readdata[1]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.667 ; i2c_core:core|p_state.s_Start_B ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.672 ; i2c_core:core|p_state.s_Stop_B  ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.938      ;
+; 0.682 ; i2c_core:core|p_state.s_Stop_A  ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.948      ;
+; 0.685 ; i2c_core:core|cmd_done          ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.951      ;
+; 0.701 ; i2c_core:core|p_state.s_Idle    ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 0.000        ; -0.001     ; 0.966      ;
+; 0.711 ; i2c_core:core|i_dout[1]         ; i2c_core:core|data_out[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.977      ;
+; 0.712 ; i2c_core:core|i_dout[3]         ; i2c_core:core|data_out[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.978      ;
+; 0.757 ; i2c_core:core|p_state.s_Idle    ; i2c_core:core|busy              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.023      ;
+; 0.791 ; i_write_reg                     ; i_stop_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.057      ;
+; 0.795 ; i2c_clkgen:clkgen|clk_ctr[0]    ; i2c_clkgen:clkgen|clk_ctr[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.797 ; i_write_reg                     ; i_start_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.797 ; scl_in                          ; i2c_core:core|scl_out           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.799 ; i2c_core:core|p_state.s_Done    ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 1.065      ;
+; 0.801 ; i2c_clkgen:clkgen|clk_ctr[2]    ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.067      ;
+; 0.802 ; i2c_clkgen:clkgen|clk_ctr[6]    ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; i2c_clkgen:clkgen|clk_ctr[4]    ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.825 ; i2c_core:core|busy              ; readdata[1]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.091      ;
+; 0.833 ; sda_in                          ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.099      ;
+; 0.837 ; i2c_core:core|p_state.s_WrAck_A ; i2c_core:core|p_state.s_WrAck_B ; clk          ; clk         ; 0.000        ; 0.000      ; 1.103      ;
+; 0.838 ; i2c_clkgen:clkgen|clk_ctr[5]    ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; i2c_clkgen:clkgen|clk_ctr[3]    ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.838 ; i2c_clkgen:clkgen|clk_ctr[1]    ; i2c_clkgen:clkgen|clk_ctr[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.839 ; i2c_core:core|cmd_done          ; i_read_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.105      ;
+; 0.841 ; i2c_core:core|cmd_done          ; i_write_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.846 ; i_read_reg                      ; i_start_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.112      ;
+; 0.847 ; i_write_reg                     ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.113      ;
+; 0.847 ; i_read_reg                      ; i_stop_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 1.113      ;
+; 0.854 ; i2c_core:core|p_state.s_Wr_B    ; i2c_core:core|p_state.s_Wr_C    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.120      ;
+; 0.854 ; i_cmd_done_ack                  ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 1.120      ;
+; 0.865 ; i2c_core:core|p_state.s_Start_D ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.131      ;
+; 0.868 ; i2c_core:core|cmd_done          ; i_int_pe_reg                    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.134      ;
+; 0.889 ; i_read_reg                      ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.155      ;
+; 0.898 ; i2c_core:core|p_state.s_WrAck_B ; i2c_core:core|p_state.s_WrAck_C ; clk          ; clk         ; 0.000        ; 0.000      ; 1.164      ;
+; 0.928 ; i2c_core:core|p_state.s_RdAck_A ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 0.000        ; 0.002      ; 1.196      ;
+; 0.937 ; i2c_core:core|i_dout[2]         ; i2c_core:core|data_out[2]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.202      ;
+; 0.981 ; i2c_core:core|p_state.s_Start_A ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 0.000        ; 0.010      ; 1.257      ;
+; 0.986 ; i2c_core:core|p_state.s_Start_A ; i2c_core:core|scl_out           ; clk          ; clk         ; 0.000        ; 0.010      ; 1.262      ;
+; 0.991 ; i2c_core:core|p_state.s_Rd_F    ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 0.000        ; 0.010      ; 1.267      ;
+; 1.001 ; i2c_core:core|p_state.s_Rd_E    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 0.000        ; -0.010     ; 1.257      ;
+; 1.002 ; i2c_core:core|p_state.s_Rd_E    ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 0.000        ; -0.010     ; 1.258      ;
+; 1.002 ; i2c_core:core|p_state.s_WrAck_D ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 0.000        ; 0.010      ; 1.278      ;
+; 1.005 ; i2c_core:core|p_state.s_Wr_A    ; i2c_core:core|p_state.s_Wr_B    ; clk          ; clk         ; 0.000        ; -0.010     ; 1.261      ;
+; 1.028 ; i_stop_reg                      ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 0.000        ; 0.016      ; 1.310      ;
+; 1.034 ; i2c_core:core|i_dout[0]         ; i2c_core:core|data_out[0]       ; clk          ; clk         ; 0.000        ; -0.001     ; 1.299      ;
+; 1.045 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.312      ;
+; 1.049 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.001      ; 1.316      ;
+; 1.060 ; i2c_core:core|data_out[3]       ; readdata[3]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 1.326      ;
+; 1.089 ; i2c_core:core|p_state.s_Stop_C  ; i2c_core:core|p_state.s_Done    ; clk          ; clk         ; 0.000        ; -0.016     ; 1.339      ;
+; 1.099 ; i2c_core:core|p_state.s_WrAck_C ; i2c_core:core|p_state.s_WrAck_D ; clk          ; clk         ; 0.000        ; 0.000      ; 1.365      ;
+; 1.111 ; i2c_core:core|p_state.s_RdAck_E ; i2c_core:core|scl_out           ; clk          ; clk         ; 0.000        ; 0.000      ; 1.377      ;
+; 1.115 ; sda_in                          ; i2c_core:core|i_dout[1]         ; clk          ; clk         ; 0.000        ; -0.001     ; 1.380      ;
+; 1.116 ; sda_in                          ; i2c_core:core|i_dout[3]         ; clk          ; clk         ; 0.000        ; -0.001     ; 1.381      ;
+; 1.132 ; i_start_reg                     ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 0.000        ; 0.006      ; 1.404      ;
+; 1.184 ; i2c_clkgen:clkgen|clk_ctr[2]    ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.450      ;
+; 1.185 ; i2c_clkgen:clkgen|clk_ctr[6]    ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.185 ; i2c_clkgen:clkgen|clk_ctr[4]    ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.451      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|i_clk_out     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|i_clk_out     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|ack_out           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|ack_out           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|busy              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|busy              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|cmd_done          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|cmd_done          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ack_out         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ack_out         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Done    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Done    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_DoneAck ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_DoneAck ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Idle    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Idle    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_A ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_A ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_B ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_B ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_C ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_C ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_D ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_D ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_E ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_E ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_A    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_A    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_B    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_B    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_C    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_C    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_D    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_D    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_E    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_E    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_F    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_F    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Reset   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Reset   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_A ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_A ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_B ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_B ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_C ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; address[*]    ; clk        ; 6.139 ; 6.139 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; 6.139 ; 6.139 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; 5.821 ; 5.821 ; Rise       ; clk             ;
+; chipselect    ; clk        ; 7.268 ; 7.268 ; Rise       ; clk             ;
+; read          ; clk        ; 5.314 ; 5.314 ; Rise       ; clk             ;
+; sda           ; clk        ; 3.928 ; 3.928 ; Rise       ; clk             ;
+; write         ; clk        ; 7.179 ; 7.179 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 5.345 ; 5.345 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 4.476 ; 4.476 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 4.477 ; 4.477 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 4.038 ; 4.038 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; 5.345 ; 5.345 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; 4.023 ; 4.023 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; 4.159 ; 4.159 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; 5.052 ; 5.052 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; address[*]    ; clk        ; -3.434 ; -3.434 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; -3.434 ; -3.434 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; -3.685 ; -3.685 ; Rise       ; clk             ;
+; chipselect    ; clk        ; -4.533 ; -4.533 ; Rise       ; clk             ;
+; read          ; clk        ; -4.422 ; -4.422 ; Rise       ; clk             ;
+; sda           ; clk        ; -3.698 ; -3.698 ; Rise       ; clk             ;
+; write         ; clk        ; -5.432 ; -5.432 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -3.246 ; -3.246 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -3.391 ; -3.391 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -3.246 ; -3.246 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -3.595 ; -3.595 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; -4.389 ; -4.389 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; -3.264 ; -3.264 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; -3.472 ; -3.472 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; -3.467 ; -3.467 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; -3.350 ; -3.350 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 7.841 ; 7.841 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 8.636 ; 8.636 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 8.636 ; 8.636 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 6.792 ; 6.792 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 7.205 ; 7.205 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 7.181 ; 7.181 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 7.172 ; 7.172 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 6.579 ; 6.579 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 7.820 ; 7.820 ; Rise       ; clk             ;
+; scl          ; clk        ; 7.256 ; 7.256 ; Rise       ; clk             ;
+; sda          ; clk        ; 7.156 ; 7.156 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 7.841 ; 7.841 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 6.579 ; 6.579 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 8.636 ; 8.636 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 6.792 ; 6.792 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 7.205 ; 7.205 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 7.181 ; 7.181 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 7.172 ; 7.172 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 6.579 ; 6.579 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 7.820 ; 7.820 ; Rise       ; clk             ;
+; scl          ; clk        ; 7.256 ; 7.256 ; Rise       ; clk             ;
+; sda          ; clk        ; 7.156 ; 7.156 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.964 ; -41.002       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -101.380              ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                         ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[0]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[7]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[6]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[5]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[4]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[3]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[2]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.964 ; i_write_reg                    ; i_clkdiv_reg[1]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 2.003      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[0]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[7]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[6]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[5]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[4]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[3]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[2]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.907 ; i_read_reg                     ; i_clkdiv_reg[1]                 ; clk          ; clk         ; 1.000        ; 0.007      ; 1.946      ;
+; -0.849 ; i_write_reg                    ; i_ack_reg                       ; clk          ; clk         ; 1.000        ; 0.009      ; 1.890      ;
+; -0.849 ; i_write_reg                    ; i_int_en_reg                    ; clk          ; clk         ; 1.000        ; 0.009      ; 1.890      ;
+; -0.792 ; i_read_reg                     ; i_ack_reg                       ; clk          ; clk         ; 1.000        ; 0.009      ; 1.833      ;
+; -0.792 ; i_read_reg                     ; i_int_en_reg                    ; clk          ; clk         ; 1.000        ; 0.009      ; 1.833      ;
+; -0.717 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.748      ;
+; -0.717 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.748      ;
+; -0.717 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.748      ;
+; -0.717 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.748      ;
+; -0.717 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.748      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_E ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.684 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.722      ;
+; -0.679 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.710      ;
+; -0.679 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.710      ;
+; -0.679 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.710      ;
+; -0.679 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.710      ;
+; -0.679 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.710      ;
+; -0.666 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_Rd_B    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.698      ;
+; -0.662 ; i2c_clkgen:clkgen|i_clk_out    ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 1.000        ; 0.001      ; 1.695      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_E ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.646 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.684      ;
+; -0.628 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_Rd_B    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.660      ;
+; -0.624 ; i2c_core:core|p_state.s_Idle   ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 1.000        ; 0.001      ; 1.657      ;
+; -0.605 ; i_write_reg                    ; i_data_in[2]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[0]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[4]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[5]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[1]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[3]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[6]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.605 ; i_write_reg                    ; i_data_in[7]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.650      ;
+; -0.576 ; i2c_core:core|p_state.s_Stop_B ; i2c_core:core|sda_out           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.608      ;
+; -0.570 ; i2c_core:core|p_state.s_Stop_A ; i2c_core:core|sda_out           ; clk          ; clk         ; 1.000        ; 0.000      ; 1.602      ;
+; -0.562 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.593      ;
+; -0.562 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; -0.001     ; 1.593      ;
+; -0.562 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_RdAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.593      ;
+; -0.562 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.593      ;
+; -0.562 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 1.000        ; -0.001     ; 1.593      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[1]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.553 ; i2c_clkgen:clkgen|clk_ctr[0]   ; i2c_clkgen:clkgen|clk_ctr[0]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.585      ;
+; -0.548 ; i_read_reg                     ; i_data_in[2]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[0]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[4]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[5]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[1]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[3]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[6]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.548 ; i_read_reg                     ; i_data_in[7]                    ; clk          ; clk         ; 1.000        ; 0.013      ; 1.593      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_D    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Rd_E    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Wr_A    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_RdAck_E ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.529 ; i2c_core:core|p_state.s_Reset  ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 1.000        ; 0.006      ; 1.567      ;
+; -0.524 ; i_write_reg                    ; i2c_core:core|p_state.s_Wr_E    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.562      ;
+; -0.524 ; i_write_reg                    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 1.000        ; 0.006      ; 1.562      ;
++--------+--------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                          ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; i2c_core:core|i_dout[0]         ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_ack_out         ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i_write_reg                     ; i_write_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i_read_reg                      ; i_read_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_ctr[0]          ; i2c_core:core|i_ctr[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_ctr[1]          ; i2c_core:core|i_ctr[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_ctr[2]          ; i2c_core:core|i_ctr[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|p_state.s_DoneAck ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|p_state.s_Start_D ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|p_state.s_Rd_D    ; i2c_core:core|p_state.s_Rd_D    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|p_state.s_RdAck_D ; i2c_core:core|p_state.s_RdAck_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[1]         ; i2c_core:core|i_dout[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i_int_pe_reg                    ; i_int_pe_reg                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[2]         ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[3]         ; i2c_core:core|i_dout[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[4]         ; i2c_core:core|i_dout[4]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[5]         ; i2c_core:core|i_dout[5]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[6]         ; i2c_core:core|i_dout[6]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_core:core|i_dout[7]         ; i2c_core:core|i_dout[7]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.235 ; i_int_en_reg                    ; irq~reg0                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.387      ;
+; 0.237 ; i2c_core:core|p_state.s_RdAck_B ; i2c_core:core|p_state.s_RdAck_C ; clk          ; clk         ; 0.000        ; 0.000      ; 0.389      ;
+; 0.238 ; i2c_core:core|i_dout[5]         ; i2c_core:core|data_out[5]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; i2c_core:core|data_out[7]       ; readdata[7]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; i2c_core:core|p_state.s_Rd_B    ; i2c_core:core|p_state.s_Rd_C    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; i2c_core:core|i_ack_out         ; i2c_core:core|ack_out           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; i2c_core:core|p_state.s_DoneAck ; i2c_core:core|cmd_done          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; i2c_clkgen:clkgen|clk_ctr[7]    ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; i2c_core:core|i_dout[4]         ; i2c_core:core|data_out[4]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; i2c_core:core|i_dout[6]         ; i2c_core:core|data_out[6]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|p_state.s_Rd_D    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.244 ; i2c_core:core|p_state.s_Reset   ; i2c_core:core|p_state.s_Idle    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; i2c_core:core|p_state.s_Reset   ; i2c_core:core|busy              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; i2c_core:core|p_state.s_RdAck_C ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.247 ; i2c_core:core|p_state.s_Start_C ; i2c_core:core|p_state.s_Start_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; i2c_core:core|p_state.s_RdAck_C ; i2c_core:core|p_state.s_RdAck_D ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.257 ; i2c_core:core|i_ctr[1]          ; i2c_core:core|i_ctr[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.261 ; sda_in                          ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.413      ;
+; 0.264 ; sda_in                          ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.416      ;
+; 0.266 ; i2c_core:core|scl_out           ; scl_in                          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.418      ;
+; 0.293 ; i2c_core:core|p_state.s_Done    ; i2c_core:core|cmd_done          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.445      ;
+; 0.322 ; i2c_core:core|i_dout[7]         ; i2c_core:core|data_out[7]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.474      ;
+; 0.323 ; i2c_core:core|data_out[0]       ; readdata[0]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.475      ;
+; 0.326 ; i2c_core:core|data_out[2]       ; readdata[2]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.327 ; i2c_core:core|i_dout[1]         ; i2c_core:core|data_out[1]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.479      ;
+; 0.328 ; i2c_core:core|data_out[1]       ; readdata[1]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.328 ; i2c_core:core|i_dout[3]         ; i2c_core:core|data_out[3]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.480      ;
+; 0.329 ; i2c_core:core|p_state.s_Start_B ; i2c_core:core|p_state.s_Start_C ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; i2c_core:core|p_state.s_Stop_B  ; i2c_core:core|p_state.s_Stop_C  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.331 ; i2c_core:core|p_state.s_Idle    ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 0.000        ; -0.001     ; 0.482      ;
+; 0.334 ; i2c_core:core|cmd_done          ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.486      ;
+; 0.338 ; i2c_core:core|p_state.s_Stop_A  ; i2c_core:core|p_state.s_Stop_B  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.490      ;
+; 0.356 ; i2c_clkgen:clkgen|clk_ctr[0]    ; i2c_clkgen:clkgen|clk_ctr[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358 ; i2c_clkgen:clkgen|clk_ctr[6]    ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; i2c_clkgen:clkgen|clk_ctr[4]    ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; i2c_clkgen:clkgen|clk_ctr[2]    ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; scl_in                          ; i2c_core:core|scl_out           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; i2c_core:core|p_state.s_Done    ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; i2c_core:core|p_state.s_Idle    ; i2c_core:core|busy              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.371 ; i2c_clkgen:clkgen|clk_ctr[3]    ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; i2c_clkgen:clkgen|clk_ctr[1]    ; i2c_clkgen:clkgen|clk_ctr[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; i2c_clkgen:clkgen|clk_ctr[5]    ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; i2c_core:core|busy              ; readdata[1]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.378 ; i_write_reg                     ; i_stop_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.530      ;
+; 0.382 ; i_cmd_done_ack                  ; i2c_core:core|p_state.s_DoneAck ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.383 ; i_write_reg                     ; i_start_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.385 ; sda_in                          ; i2c_core:core|i_ack_out         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.537      ;
+; 0.387 ; i2c_core:core|p_state.s_Start_D ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.388 ; i_write_reg                     ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.540      ;
+; 0.392 ; i2c_core:core|cmd_done          ; i_read_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.544      ;
+; 0.393 ; i2c_core:core|cmd_done          ; i_int_pe_reg                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.545      ;
+; 0.394 ; i2c_core:core|cmd_done          ; i_write_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.546      ;
+; 0.398 ; i_read_reg                      ; i_stop_reg                      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.550      ;
+; 0.398 ; i_read_reg                      ; i_start_reg                     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.550      ;
+; 0.400 ; i_read_reg                      ; i_cmd_done_ack                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.552      ;
+; 0.412 ; i2c_core:core|p_state.s_Wr_B    ; i2c_core:core|p_state.s_Wr_C    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.564      ;
+; 0.414 ; i2c_core:core|p_state.s_WrAck_A ; i2c_core:core|p_state.s_WrAck_B ; clk          ; clk         ; 0.000        ; 0.000      ; 0.566      ;
+; 0.420 ; i2c_core:core|p_state.s_RdAck_A ; i2c_core:core|p_state.s_RdAck_B ; clk          ; clk         ; 0.000        ; 0.002      ; 0.574      ;
+; 0.427 ; i2c_core:core|i_dout[2]         ; i2c_core:core|data_out[2]       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.578      ;
+; 0.438 ; i2c_core:core|p_state.s_WrAck_B ; i2c_core:core|p_state.s_WrAck_C ; clk          ; clk         ; 0.000        ; 0.000      ; 0.590      ;
+; 0.453 ; i2c_core:core|p_state.s_Start_A ; i2c_core:core|p_state.s_Start_B ; clk          ; clk         ; 0.000        ; 0.007      ; 0.612      ;
+; 0.457 ; i2c_core:core|p_state.s_Start_A ; i2c_core:core|scl_out           ; clk          ; clk         ; 0.000        ; 0.007      ; 0.616      ;
+; 0.461 ; i2c_core:core|p_state.s_Rd_F    ; i2c_core:core|p_state.s_Rd_A    ; clk          ; clk         ; 0.000        ; 0.007      ; 0.620      ;
+; 0.465 ; i_stop_reg                      ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 0.000        ; 0.013      ; 0.630      ;
+; 0.465 ; i2c_core:core|p_state.s_WrAck_D ; i2c_core:core|p_state.s_Stop_A  ; clk          ; clk         ; 0.000        ; 0.007      ; 0.624      ;
+; 0.466 ; i2c_core:core|p_state.s_Rd_E    ; i2c_core:core|p_state.s_Rd_F    ; clk          ; clk         ; 0.000        ; -0.007     ; 0.611      ;
+; 0.467 ; i2c_core:core|p_state.s_Wr_A    ; i2c_core:core|p_state.s_Wr_B    ; clk          ; clk         ; 0.000        ; -0.007     ; 0.612      ;
+; 0.469 ; i2c_core:core|p_state.s_Rd_E    ; i2c_core:core|p_state.s_WrAck_A ; clk          ; clk         ; 0.000        ; -0.007     ; 0.614      ;
+; 0.479 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|i_dout[2]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.632      ;
+; 0.481 ; i2c_core:core|p_state.s_Rd_C    ; i2c_core:core|i_dout[0]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.634      ;
+; 0.496 ; i2c_clkgen:clkgen|clk_ctr[6]    ; i2c_clkgen:clkgen|clk_ctr[7]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; i2c_clkgen:clkgen|clk_ctr[2]    ; i2c_clkgen:clkgen|clk_ctr[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496 ; i2c_clkgen:clkgen|clk_ctr[4]    ; i2c_clkgen:clkgen|clk_ctr[5]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.648      ;
+; 0.499 ; i2c_core:core|data_out[3]       ; readdata[3]~reg0                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; i2c_core:core|i_dout[0]         ; i2c_core:core|data_out[0]       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.651      ;
+; 0.507 ; sda_in                          ; i2c_core:core|i_dout[1]         ; clk          ; clk         ; 0.000        ; -0.001     ; 0.658      ;
+; 0.508 ; sda_in                          ; i2c_core:core|i_dout[3]         ; clk          ; clk         ; 0.000        ; -0.001     ; 0.659      ;
+; 0.511 ; i2c_clkgen:clkgen|clk_ctr[3]    ; i2c_clkgen:clkgen|clk_ctr[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; i2c_clkgen:clkgen|clk_ctr[1]    ; i2c_clkgen:clkgen|clk_ctr[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; i2c_clkgen:clkgen|clk_ctr[5]    ; i2c_clkgen:clkgen|clk_ctr[6]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.517 ; i_start_reg                     ; i2c_core:core|p_state.s_Start_A ; clk          ; clk         ; 0.000        ; 0.006      ; 0.675      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|clk_ctr[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_clkgen:clkgen|i_clk_out     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_clkgen:clkgen|i_clk_out     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|ack_out           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|ack_out           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|busy              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|busy              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|cmd_done          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|cmd_done          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[0]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[1]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[2]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[3]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[4]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[5]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[6]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|data_out[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|data_out[7]       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ack_out         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ack_out         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_ctr[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_ctr[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[0]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[1]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[2]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[3]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[4]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[5]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[6]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|i_dout[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|i_dout[7]         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Done    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Done    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_DoneAck ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_DoneAck ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Idle    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Idle    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_A ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_A ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_B ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_B ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_C ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_C ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_D ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_D ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_E ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_RdAck_E ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_A    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_A    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_B    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_B    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_C    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_C    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_D    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_D    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_E    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_E    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_F    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Rd_F    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Reset   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Reset   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_A ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_A ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_B ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_B ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; i2c_core:core|p_state.s_Start_C ;
++--------+--------------+----------------+------------------+-------+------------+---------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; address[*]    ; clk        ; 3.080 ; 3.080 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; 3.080 ; 3.080 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; 2.909 ; 2.909 ; Rise       ; clk             ;
+; chipselect    ; clk        ; 3.604 ; 3.604 ; Rise       ; clk             ;
+; read          ; clk        ; 2.685 ; 2.685 ; Rise       ; clk             ;
+; sda           ; clk        ; 1.989 ; 1.989 ; Rise       ; clk             ;
+; write         ; clk        ; 3.539 ; 3.539 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 2.698 ; 2.698 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 2.277 ; 2.277 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 2.253 ; 2.253 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 2.058 ; 2.058 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; 2.698 ; 2.698 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; 2.046 ; 2.046 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; 2.209 ; 2.209 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; 2.140 ; 2.140 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; 2.522 ; 2.522 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; address[*]    ; clk        ; -1.753 ; -1.753 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; -1.753 ; -1.753 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; -1.847 ; -1.847 ; Rise       ; clk             ;
+; chipselect    ; clk        ; -2.267 ; -2.267 ; Rise       ; clk             ;
+; read          ; clk        ; -2.266 ; -2.266 ; Rise       ; clk             ;
+; sda           ; clk        ; -1.869 ; -1.869 ; Rise       ; clk             ;
+; write         ; clk        ; -2.651 ; -2.651 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -1.611 ; -1.611 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -1.706 ; -1.706 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -1.611 ; -1.611 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -1.813 ; -1.813 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; -2.213 ; -2.213 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; -1.648 ; -1.648 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; -1.757 ; -1.757 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; -1.769 ; -1.769 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; -1.689 ; -1.689 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 4.532 ; 4.532 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 4.876 ; 4.876 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 4.876 ; 4.876 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 4.246 ; 4.246 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 4.109 ; 4.109 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 4.128 ; 4.128 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 3.880 ; 3.880 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 4.456 ; 4.456 ; Rise       ; clk             ;
+; scl          ; clk        ; 4.157 ; 4.157 ; Rise       ; clk             ;
+; sda          ; clk        ; 4.130 ; 4.130 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 4.532 ; 4.532 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 3.880 ; 3.880 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 4.876 ; 4.876 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 4.246 ; 4.246 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 4.109 ; 4.109 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 4.128 ; 4.128 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 3.880 ; 3.880 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 4.456 ; 4.456 ; Rise       ; clk             ;
+; scl          ; clk        ; 4.157 ; 4.157 ; Rise       ; clk             ;
+; sda          ; clk        ; 4.130 ; 4.130 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.169   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; -3.169   ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -177.842 ; 0.0   ; 0.0      ; 0.0     ; -101.38             ;
+;  clk             ; -177.842 ; 0.000 ; N/A      ; N/A     ; -101.380            ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; address[*]    ; clk        ; 6.139 ; 6.139 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; 6.139 ; 6.139 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; 5.821 ; 5.821 ; Rise       ; clk             ;
+; chipselect    ; clk        ; 7.268 ; 7.268 ; Rise       ; clk             ;
+; read          ; clk        ; 5.314 ; 5.314 ; Rise       ; clk             ;
+; sda           ; clk        ; 3.928 ; 3.928 ; Rise       ; clk             ;
+; write         ; clk        ; 7.179 ; 7.179 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; 5.345 ; 5.345 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; 4.476 ; 4.476 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; 4.477 ; 4.477 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; 4.038 ; 4.038 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; 5.345 ; 5.345 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; 4.023 ; 4.023 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; 4.346 ; 4.346 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; 4.159 ; 4.159 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; 5.052 ; 5.052 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; address[*]    ; clk        ; -1.753 ; -1.753 ; Rise       ; clk             ;
+;  address[0]   ; clk        ; -1.753 ; -1.753 ; Rise       ; clk             ;
+;  address[1]   ; clk        ; -1.847 ; -1.847 ; Rise       ; clk             ;
+; chipselect    ; clk        ; -2.267 ; -2.267 ; Rise       ; clk             ;
+; read          ; clk        ; -2.266 ; -2.266 ; Rise       ; clk             ;
+; sda           ; clk        ; -1.869 ; -1.869 ; Rise       ; clk             ;
+; write         ; clk        ; -2.651 ; -2.651 ; Rise       ; clk             ;
+; writedata[*]  ; clk        ; -1.611 ; -1.611 ; Rise       ; clk             ;
+;  writedata[0] ; clk        ; -1.706 ; -1.706 ; Rise       ; clk             ;
+;  writedata[1] ; clk        ; -1.611 ; -1.611 ; Rise       ; clk             ;
+;  writedata[2] ; clk        ; -1.813 ; -1.813 ; Rise       ; clk             ;
+;  writedata[3] ; clk        ; -2.213 ; -2.213 ; Rise       ; clk             ;
+;  writedata[4] ; clk        ; -1.648 ; -1.648 ; Rise       ; clk             ;
+;  writedata[5] ; clk        ; -1.757 ; -1.757 ; Rise       ; clk             ;
+;  writedata[6] ; clk        ; -1.769 ; -1.769 ; Rise       ; clk             ;
+;  writedata[7] ; clk        ; -1.689 ; -1.689 ; Rise       ; clk             ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 7.841 ; 7.841 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 8.636 ; 8.636 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 8.636 ; 8.636 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 7.402 ; 7.402 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 6.792 ; 6.792 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 7.205 ; 7.205 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 7.181 ; 7.181 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 7.172 ; 7.172 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 6.579 ; 6.579 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 7.820 ; 7.820 ; Rise       ; clk             ;
+; scl          ; clk        ; 7.256 ; 7.256 ; Rise       ; clk             ;
+; sda          ; clk        ; 7.156 ; 7.156 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; irq          ; clk        ; 4.532 ; 4.532 ; Rise       ; clk             ;
+; readdata[*]  ; clk        ; 3.880 ; 3.880 ; Rise       ; clk             ;
+;  readdata[0] ; clk        ; 4.876 ; 4.876 ; Rise       ; clk             ;
+;  readdata[1] ; clk        ; 4.246 ; 4.246 ; Rise       ; clk             ;
+;  readdata[2] ; clk        ; 3.974 ; 3.974 ; Rise       ; clk             ;
+;  readdata[3] ; clk        ; 4.127 ; 4.127 ; Rise       ; clk             ;
+;  readdata[4] ; clk        ; 4.109 ; 4.109 ; Rise       ; clk             ;
+;  readdata[5] ; clk        ; 4.128 ; 4.128 ; Rise       ; clk             ;
+;  readdata[6] ; clk        ; 3.880 ; 3.880 ; Rise       ; clk             ;
+;  readdata[7] ; clk        ; 4.456 ; 4.456 ; Rise       ; clk             ;
+; scl          ; clk        ; 4.157 ; 4.157 ; Rise       ; clk             ;
+; sda          ; clk        ; 4.130 ; 4.130 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 773      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 773      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 244   ; 244  ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Sun Jan 08 22:52:53 2012
+Info: Command: quartus_sta Tst_i2c_Avalon -c Tst_i2c_Avalon
+Info: qsta_default_script.tcl version: #1
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'Tst_i2c_Avalon.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clk clk
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -3.169
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.169      -177.842 clk 
+Info: Worst-case hold slack is 0.391
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.391         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380      -101.380 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 11 output pins without output pin load capacitance assignment
+    Info: Pin "scl" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "sda" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "readdata[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "irq" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.964
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.964       -41.002 clk 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380      -101.380 clk 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 375 megabytes
+    Info: Processing ended: Sun Jan 08 22:53:14 2012
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:02
+
+

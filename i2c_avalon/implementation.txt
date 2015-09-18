@@ -1,0 +1,23 @@
+
+Autor    : Peter Soltys
+Projekt  : Bakalarska praca "Procesor NIOS vo vlozenych aplikaciach"
+Veduci   : doc. Ing. Milos Drutarovsky, PhD
+   
+Datum    : 27.maj 2015
+Verzia   : 3
+Testovane: Quartus 9.1sp2, Quartus 10.1sp1
+
+Ako implemetovat v SPOC Builder:
+    -Cely priecinok i2cavalon v ktorom sa nachadza aj tento subor je potrebne nahrat 
+     do <subor instalacie Quartus>/ip        priklad: C/Altera/91sp2/ip/
+    -otvorit SOPC Builder stlacit F5 pre refersh
+    -zvolit: component library->Interface Protocols->i2c_interface
+
+Ako implementovat v NIOS II Software Build Tool:
+    pri vytváraní projektu sa automaticky do HAL nahraju subory i2c.c 
+    a i2c.h, 
+    -nalinkovat subor #include <i2c.h> 
+    -otvort subor Onewire.h a pozmente v riadku 55 makro #define ZBERNICA ZBERNICA_0_BASE
+     kde pozmente ZBERNICA_0_BASE predstavuje zakladnu adresu, zbernice v pametovom priestore
+     toto makro je zadefinovane v subore system.h ktory je automaticky vygenerovany 
+     pri vytvarani projektu. Jeho nazov ma NAZOV_KOMPONENTU_BASE

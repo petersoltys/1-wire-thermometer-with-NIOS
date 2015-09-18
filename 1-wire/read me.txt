@@ -1,0 +1,40 @@
+
+Autor    : Peter Soltys
+Projekt  : Bakalarska praca "Procesor NIOS vo vlozenych aplikaciach"
+Veduci   : doc. Ing. Milos Drutarovsky, PhD
+   
+Datum    : 27.maj 2015
+Verzia   : 3
+Testovane: Quartus 9.1sp2, Quartus 10.1sp1
+
+Opis: tento priecinok obsahuje vsetky potrebne subory na implementovanie zbernice
+      1-wire v programe SOPC Builder, a funkcie pracujue s teplomerom DS18B20
+
+Subory    : implemetation.txt --obsahuje jednoduchy navod ako implementovat zbernicu do projektu
+
+            zbernica_sw.tcl     --subor opisuje nalinkovanie zdrojovych kodov do 
+                                Nios II software build
+
+            HAL      --obsahuje súbory v jazyku c ovladajuce zbernicu 1-wire
+
+            HAL/inc/one_wire.h  --prototypy funkcii a makra pre zbernicu 1-wire
+
+            HAL/src/one_wire.c  --funkcie ovladajuce zbernicu 1-wire
+            HAL/src/component.mk--makefie subor na nalinkovanie súborov
+                                  do nios II Software Build
+            hdl
+
+            hdl/zbernica.vhd    --zdrojovy kod v jazyku VHDL opisujuci zbernicu 1-wire
+
+            hdl/zbernica_hw.tcl --subor opisuje sposob pripojenia Memory Maped Slave 
+                                zariadenia na avalon zbernicu a implementovanie 
+                                do SOPC Builder
+
+Histria :27.dedcember 2014 --vytvorenie prvej funkcnej verzie
+
+         12.januar 2014 --uprava vyhladavacieho slotu pre vyber zariadenie
+                          funkcy algoritmu, no nedokaze vyhladat vsetky zariadenia
+
+         2.maj 2015 -- odstranenie vyhladavacieho slotu, a zavedenie bitoveho modu
+                    pre potreby vyhladavacieho algoritmu zo stranky:
+                    http://www.maximintegrated.com/en/app-notes/index.mvp/id/187

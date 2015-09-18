@@ -1,0 +1,38 @@
+
+Autor    : Peter Soltys
+Projekt  : Bakalarska praca "Procesor NIOS vo vlozenych aplikaciach"
+Veduci   : doc. Ing. Milos Drutarovsky, PhD
+   
+Datum    : 27.maj 2015
+Verzia   : 1
+Testovane: Quartus 9.1sp2, Quartus 10.1sp1
+
+Opis: tento priecinok obsahuje vsetky potrebne subory na implementovanie zbernice
+      I2C na komunikaciu s obvodom M41T00 na vyvojovej doske UP3-1C6
+
+
+Subory    : implemetation.txt --obsahuje jednoduchy navod ako implementovat zbernicu do projektu
+
+
+            i2c_interface_hw.tcl--subor opisuje sposob nalinkovania suboru do
+                                Nios II software build
+
+            HAL                 --obsahuje súbory v jazyku c ovladajuce zbernicu 1-wire
+
+            HAL/inc/i2c.h       --prototypy funkcii a makra pre zbernicu i2c
+
+            HAL/src/i2c.c       --funkcie ovladajuce zbernicu i2c
+            HAL/src/component.mk--makefie subor na nalinkovanie súborov
+                                  do nios II Software Build
+            hdl
+
+            hdl/zbernica.vhd  --zdrojovy kod v jazyku VHDL opisujuci zbernicu 1-wire
+
+            hdl/i2c_interface_sw.tcl--subor opisuje sposob pripojenia Memory Maped Slave 
+                                zariadenia na avalon zbernicu a implementovanie 
+                                do SOPC Builder
+
+            inc_new --povodne zdrojove kody
+            Tst_i2c --referencny dizajn
+
+Histria :27.januar 2015 --vytvorenie funkcnej verzie komunikujucej s RTC

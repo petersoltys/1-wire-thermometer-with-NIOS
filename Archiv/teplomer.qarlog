@@ -1,0 +1,57 @@
+Quartus II Archive log --	D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/Soltys_Teplomer/Archiv/teplomer.qarlog
+
+Archive:	D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/Soltys_Teplomer/Archiv/teplomer.qar
+Date:		Wed Jun 24 19:11:56 2015
+Quartus II		9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+
+	=========== Files Selected: ===========
+D:/altera/91sp2/ip/1-wire/hdl/zbernica_hw.tcl
+D:/altera/91sp2/ip/i2c_avalon/hdl/i2c_interface_hw.tcl
+D:/altera/91sp2/ip/sd_card.stp
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/Altera_UP_SD_Card.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/Altera_UP_SD_Card_Avalon_Interface_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/SW.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/buttons.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0.sdc
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_jtag_debug_module_sysclk.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_jtag_debug_module_tck.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_jtag_debug_module_wrapper.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_oci_test_bench.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_ociram_default_contents.mif
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_rf_ram.mif
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/cpu_0_test_bench.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/i2c_interface_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/jtag_uart_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/lcd_display.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/lcd_signal.stp
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/led.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/niosII.qip
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/niosII.sopc
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/niosII.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/niosII_inst.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/onchip_memory2_0.hex
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/onchip_memory2_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/pins.tcl
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/sdram_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/sopc_add_qip_file.tcl
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/spi_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/teplomer.dpf
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/teplomer.qpf
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/teplomer.qsf
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/teplomer.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/uart_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/zbernica.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/zbernica_0.vhd
+D:/dokumenty/3.rocnik/Bakalarka/altera/teplomer/zbernica_hw.tcl
+d:/altera/91sp2/ip/1-wire/hdl/zbernica.vhd
+d:/altera/91sp2/ip/1-wire/hdl/zbernica_hw.tcl
+d:/altera/91sp2/ip/i2c_avalon/hdl/i2c_clkgen.vhd
+d:/altera/91sp2/ip/i2c_avalon/hdl/i2c_core.vhd
+d:/altera/91sp2/ip/i2c_avalon/hdl/i2c_interface.vhd
+d:/altera/91sp2/ip/i2c_avalon/hdl/i2c_interface_hw.tcl
+d:/altera/91sp2/quartus/bin/assignment_defaults.qdf
+	======= Total: 46 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
